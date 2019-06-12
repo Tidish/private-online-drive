@@ -15,7 +15,7 @@ require 'backend/PasswordReset/CreatePassword.php';
 <title><?php echo $WebsiteTitle; ?></title> <!-- Globalus kintamasis keičiamas per includes/config.php -->
 <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
 <link rel="stylesheet" href="css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
@@ -62,13 +62,13 @@ require 'backend/PasswordReset/CreatePassword.php';
     if(isset($_GET["action"])){
      if($_GET["action"] == "forgotpassword"){
       ?>
-      <div class="login-box">
+      <div class="login-box bigger">
         <h1><?php echo "$emailRecoveryGreeting"; ?></h1>
         <h4><?php echo $emailRecoveryInstructions; ?></h4>
         <form method="POST">
         <div class="textbox">
          <i class="fas fa-envelope-open"></i>
-        <input type="text" name="email" placeholder="Enter your e-mail address.." required></input>
+        <input class="textbox-input" type="text" name="email" placeholder="Enter your e-mail address..." required></input>
           </div>
         <button type="submit" class="btn-textbox" name="reset-request-submit"><?php echo $emailRecoveryPassword; ?></button>
         </form>
@@ -136,14 +136,13 @@ require 'backend/PasswordReset/CreatePassword.php';
      <h1>Login</h1>
     <div class="textbox">
      <i class="fas fa-user"></i>
-    <input type="text" name="username" placeholder="Username" required></input>
+    <input class="textbox-input" type="text" name="username" placeholder="Username" required></input>
       </div>
       <div class="textbox">
         <i class="fas fa-lock"></i>
-
-    <input type="password" name="password" placeholder="Password" required></input>
+    <input class="textbox-input" type="password" name="password" placeholder="Password" required></input>
       </div>
-    <button class="btn-textbox" name="submit">Sign In</button>
+    <button type="submit" class="btn-textbox" name="submit">Sign In</button>
     </form>
     <div class="login-remind">
        <a href="?action=forgotpassword">Forgot your password?</a>
